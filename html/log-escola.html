@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Escola - Secretaria Senai</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="shortcut icon" type="imagex/png" href="..//imagens/sdvsdv.png">
+</head>
+<body>
+    <div class="cabecalho">
+        <div class="img-cab">
+            <img src="../imagens/senai_logo.png" alt="logo">
+        </div>
+        <div class="titulo">
+            <h1>Secretaria Senai</h1>
+        </div>
+    </div>
+    <div id="container">
+        <div class="quadrado">
+            <center>
+                <form method="POST" action="../php/log-escola.php">    
+                    <h1>Fazer Login</h1>
+                    <label><strong>Usuário</strong></label> <br>
+                    <input type="hidden" name="submit_form" value="1"> <!-- Campo oculto para indicar envio do formulário -->
+                    <input class="text-input" type="text" name="usuario" id="usuario" required="required"><br>
+                    <label><strong>Senha</strong></label> <br> 
+                    <input class="text-input" type="password" name="password" id="password" required="required"><br>
+
+                    <span>Não é usuário?</span>  
+                    <a class="cadastro_u" style="color:#004C9B" href="cadastro_u.html">Cadastre-se aqui</a>
+                    <br>
+
+                    <button type="submit" class="bot2_entrar" name="entrar" id="entrar" >Entrar</button>
+            </form>     
+           </center>
+           
+        </div>
+    </div>
+</body>
+</html>    

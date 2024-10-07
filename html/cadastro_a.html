@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" type="imagex/png" href="..//imagens/sdvsdv.png">
+</head>
+<body>
+    <div class="cabecalho">
+        <div class="img-cab">
+            <img src="../imagens/senai_logo.png" alt="logo">
+        </div>
+
+        <div class="titulo">
+            <h1>Secretaria Senai - Cadastro</h1>
+        </div>
+    </div> 
+
+    <div id="container">
+        <div class="form">
+            <form method="POST" action="../php/cadastro_a.php">
+                <div class="form-header">
+                        <div class="title">
+                            <h1>Cadastre-se</h1>
+                        </div>
+                </div>
+    
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="nome">Nome</label>
+                        <input id="nome" type="text" name="nome" placeholder="Digite seu nome completo" required>
+                    </div>
+    
+                    <div class="input-box">
+                        <label for="numero_matricula">Matrícula</label>
+                        <input id="numero_matricula" type="number" name="numero_matricula" placeholder="Número de matrícula" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="cpf">CPF</label>
+                        <input id="cpf" type="text" name="cpf" maxlength="11" placeholder="CPF sem pontuação" required>
+                    </div>
+                        
+                    <div class="input-box">
+                        <label for="telefone">Telefone</label>
+                        <input id="telefone" type="text" name="telefone" placeholder="Fone ex.: (xx)xxxxx-xxxx" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="email">E-mail</label>
+                        <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
+                    </div>
+    
+                    <div class="input-box">
+                        <label for="password">Senha</label>
+                        <input id="password" type="password" name="password" maxlength="8" placeholder="Max. 8 caracteres" required>
+                    </div>
+    
+                </div>
+                <center><button type="submit" class="cadastro">Cadastrar</button></center> 
+                <center><a style="color:#004C9B" href="../html/log-aluno.html">Fazer Login</a></center>         
+            </form>
+        </div>
+    </div>    
+</body>
+</html>

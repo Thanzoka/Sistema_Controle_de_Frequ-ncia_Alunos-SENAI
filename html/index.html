@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secretaria Senai</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="shortcut icon" type="imagex/png" href="..//imagens/sdvsdv.png">
+</head>
+<body>
+    <div class="cabecalho">
+        <div class="img-cab">
+            <img src="../imagens/senai_logo.png" alt="logo">
+        </div>
+        <div class="titulo">
+            <h1 style="font-family: Noto-Sans;">Secretaria Senai</h1>
+        </div>
+    </div>
+    <div id="container">
+        <div class="quadrado">
+            <center><h1>Entrar Como</h1>
+                <form>
+                    <select name="perfil" id="perfil" required="required">
+                        <option value="">Selecione uma opção</option>
+                        <option value="escola">Escola</option>
+                        <option value="empresa">Empresa</option>
+                        <option value="aluno">Aluno</option>
+                        <option value="ex_aluno">Ex aluno</option>
+                    </select>
+                </form>
+                <button class="bot_entrar" onclick="entrar()">Entrar</button> 
+           </center>
+        </div>
+    </div>
+
+    <script>
+        function entrar() {
+            var perfilSelecionado = document.getElementById("perfil").value;
+            if (perfilSelecionado === "escola") {
+                window.location.href = "log-escola.html";
+            } else if (perfilSelecionado === "empresa") {
+                window.location.href = "log-empresa.html";
+            } else if (perfilSelecionado === "aluno") {
+                window.location.href = "log-aluno.html";
+            } else if (perfilSelecionado === "ex_aluno") {
+                window.location.href = "../php/ex-aluno.php";
+            } else {
+                alert("Por favor, selecione uma opção antes de entrar.");
+            }
+        }
+    </script>
+</body>
+</html>

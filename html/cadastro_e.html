@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Empresa</title>
+    <link rel="stylesheet" href="../css/estilo.css"> 
+    <link rel="shortcut icon" type="imagex/png" href="..//imagens/sdvsdv.png">
+    <style>
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            color: #004C9B;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            color: #004C9B;
+        }
+    </style>
+
+    <script>
+        function buscarCep() {
+            var cep = document.getElementById('cep').value;
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'https://viacep.com.br/ws/' + cep + '/json/');
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    var endereco = JSON.parse(xhr.responseText);
+                    if (endereco.erro) {
+                         alert('CEP não encontrado');
+                    } else {
+                        document.getElementById('endereco').value = endereco.logradouro;
+                        document.getElementById('cidade').value = endereco.localidade;
+                        document.getElementById('estado').value = endereco.uf;
+                    }
+                } else {
+                     alert('Erro ao buscar CEP');
+                }
+            };
+             xhr.send();
+        }
+    </script>
+
+</head>
+<body>
+    <div class="cabecalho">
+        <div class="img-cab">
+            <img src="../imagens/senai_logo.png" alt="logo">
+        </div>
+    
+        <div class="titulo">
+            <h1>Secretaria Senai - Cadastro</h1>
+        </div>
+    </div> 
+
+    <div class="container">
+            <h1>Cadastro de Empresa</h1>
+            <form method="POST" action="../php/cadastro_e.php">
+                <label for="nome_empresa">Nome da Empresa:</label>
+                <input type="text" id="nome_empresa" name="nome_empresa" placeholder="Digite o nome da empresa" required>
+    
+                <label for="cnpj">CNPJ:</label>
+                <input type="text" id="cnpj" name="cnpj" maxlength="14" placeholder="Digite o CNPJ sem pontuação" required>
+
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" maxlength="14" placeholder="Digite o telefone ex.:(xx)xxxxx-xxxx" required>
+
+                <label for="email_empresa">Email:</label>
+                <input type="email" id="email_empresa" name="email_empresa" placeholder="Digite o e-mail" required>
+    
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" placeholder="Digite a senha que será fornecida para a empresa" required>
+
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" name="cep" maxlength="9" onblur="buscarCep()" placeholder="Digite o CEP ex.:(xxxxxxxx)" required>
+    
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" name="endereco" placeholder="Ex.: Rua, Número, Complemento (se houver) - Bairro" required>
+    
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" name="cidade">
+    
+                <label for="estado">Estado:</label>
+                <input type="text" id="estado" name="estado">
+
+                <br>
+                <button type="submit" class="cadastro2">Cadastrar</button><br>
+                <a style="color:#004C9B" href="../php/menu.php">Voltar para o Menu</a>
+            </form>
+        </div>
+    </body>
+    </html>    
+</body>
+</html>

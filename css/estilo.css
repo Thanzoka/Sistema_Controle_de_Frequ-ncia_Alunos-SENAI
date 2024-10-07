@@ -1,0 +1,633 @@
+@font-face {
+    font-family: Poppins-Regular;
+    src: url('../fonts/poppins/Poppins-Regular.ttf'); 
+  }
+  
+  @font-face {
+    font-family: Poppins-Medium;
+    src: url('../fonts/poppins/Poppins-Medium.ttf'); 
+  }
+  
+  @font-face {
+    font-family: Montserrat-Medium;
+    src: url('../fonts/montserrat/Montserrat-Medium.ttf'); 
+  }
+  
+  @font-face {
+    font-family: Montserrat-SemiBold;
+    src: url('../fonts/montserrat/Montserrat-SemiBold.ttf'); 
+  }
+
+  @font-face {
+    font-family: Noto-Sans;
+    src: url('../fonts/notosans/NotoSans-Condensed.ttf');
+  }
+
+/**********Limpar formatações pradrões**********/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/****** CORPO DO SITE ******/
+
+body {
+    background-color: #3c60a7;
+    font-size: 1em;
+    font-family: Noto-Sans;
+}
+
+.cabecalho {
+  background: #004C9B;;
+  position: relative;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+  -moz-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+  -ms-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+  -o-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+  box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+  z-index: 100;
+}
+
+.titulo {
+  text-align: center;
+  color: #fff;
+}
+
+.img-cab {
+  margin-top: 15px;
+  position: absolute;
+  left: 1%;
+  top: 40%; /* Ajuste a posição vertical conforme necessário */
+  transform: translateY(-50%);
+}
+
+.texto {
+  text-align: left;
+  font-size: 17px;
+  margin-left: 7px;
+}
+
+#container {
+  width: 100%;  
+  min-height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+    
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;;
+}
+
+.quadrado {
+    width: 680px;
+    background: #fff;
+    border-radius: 10px;
+    position: relative;
+    color: #004C9B;
+}
+
+.quadrado, select {
+    margin: 10px 0;
+    border: 2px solid #004C9B;
+    border-radius: 5px;
+    font-family: Noto-Sans;
+    font-size: 20px;
+    color: #004C9B;
+    text-align: center;
+}
+
+.alinhar {
+  text-align: left;
+  margin-left: 70px;
+}
+
+.quadrado2 {
+  width: 500px;
+  background: #fff;
+  border-radius: 10px;
+  position: relative;
+  color: #004C9B;
+}
+
+.text-input {
+  width: 300px;
+  height: 40px;
+  margin: 10px 0;
+  border: 2px solid #004C9B;
+  border-radius: 5px;
+  font-family: Noto-Sans;
+  font-size: 15px;
+  color: #004C9B;
+}
+
+.text-input-id {
+  width: 40px;
+  height: 40px;
+  margin: 10px 0;
+  border: 2px solid #004C9B;
+  border-radius: 5px;
+  font-family: Noto-Sans;
+  font-size: 15px;
+  color: #004C9B;
+  text-align: center;
+}
+
+.cadastro_u, a {
+  color: #ffffff;
+}
+
+/*********** PESQUSIA ***********/
+.box-busca{ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 15px;
+}
+.search-box-input::placeholder {
+  
+  color:#ffffff;
+  opacity: 0.6;
+}
+/* Chrome, Opera ySafari */
+.search-box-input::-webkit-input-placeholder { color: #ffffff; }
+/* Firefox 19+ */
+.search-box-input::-moz-placeholder { color: #ffffff; }
+/* IE 10+ y Edge */
+.search-box-input:-ms-input-placeholder { color: #ffffff; }
+.search-box form {
+  
+  display: flex;
+  border-radius: 50px;
+  background-color: #263b68;
+  height: 45px;
+}
+.search-box:hover .search-box-input {
+  
+  padding-left: 2em;
+  padding-right: 1em;
+  width: 250px;
+}
+.search-box-input {
+  outline: 0;
+  font-size: 1.2em;
+  color: #fff;
+  width: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  transition: .45s;
+}
+.search-box-button {
+ display: flex;
+ border-radius: 50%;
+ width: 45px;
+ height: 45px;
+ background-color: #004C9B;
+ border: none;
+ background: #ffffff url(../imagens/lupa.png) center no-repeat;
+ cursor: pointer;
+ transition: .3s;
+}
+
+.search-box-button:active  {
+  transform: scale(.85);
+}
+.search-box-icone {
+  margin: auto;
+  color: #fff;
+}
+@media screen and (min-width: 400px){
+  
+  .search-box:hover .search-box-input {
+      width: 360px;
+  }
+}
+
+/*********** BOTÕES ***********/
+/* Entrar */
+.bot_entrar {
+    font-family: Noto-Sans;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 10px 0;
+    border: none;
+    background:  #3c60a7;
+    border-radius: 3px;
+    color: #fff;
+    width: 80px;
+    height: 35px;
+    text-indent: 1px;
+}
+
+.bot_entrar:hover {
+    background: #004C9B;
+}
+
+
+/* Solicitar */
+.bot_solicitar {
+  font-family: Noto-Sans;
+  font-size: 17px;
+  cursor: pointer;
+  margin: 10px 0;
+  border: none;
+  background:  #3c60a7;
+  border-radius: 3px;
+  color: #fff;
+  width: 145px;
+  height: 33px;
+  text-indent: 1px;
+}
+
+.bot_solicitar:hover {
+  background: #004C9B;
+}
+
+/* Entrar 2 */
+
+.bot2_entrar {
+  font-family: Noto-Sans;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 10px 0;
+  border: none;
+  background:  #3c60a7;
+  border-radius: 3px;
+  color: #fff;
+  width: 80px;
+  height: 35px;
+  text-indent: 1px;
+}
+
+.bot2_entrar:hover {
+  background: #004C9B;
+}
+
+/* CADASTRO */
+.cadastro {
+  font-family: Noto-Sans;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 10px 0;
+  border: none;
+  background:  #3c60a7;
+  border-radius: 3px;
+  color: #fff;
+  width: 80px;
+  height: 40px;
+
+}
+
+.cadastro:hover {
+  background: #004C9B;
+}
+
+/* CADASTRO EMPRESA */
+.cadastro2 {
+  font-family: Noto-Sans;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 10px 0;
+  border: none;
+  background:  #3c60a7;
+  border-radius: 3px;
+  color: #fff;
+  width: 80px;
+  height: 40px;
+}
+
+.cadastro2:hover {
+  background: #004C9B;
+}
+
+/* EDITAR */
+.botao_editar {
+  font-family: Noto-Sans;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+  background:  #0088f7;
+  border-radius: 3px;
+  width: 100px;
+  height: 25px;
+}
+
+.botao_editar:hover {
+  background: #077fe2;
+}
+
+.botao_editar a{
+  color: white;
+}
+
+/* INFO */
+.botao_info {
+  font-family: Noto-Sans;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+  background:  #0088f700;
+  border-radius: 10px;
+  width: 16px;
+  height: 20px;
+}
+
+.botao_info:hover {
+  background: #077fe200;
+}
+
+.botao_info a{
+  color: white;
+}
+
+/* EDITAR 2 */
+.botao_editar2 {
+  font-family: Noto-Sans;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 10px 0;
+  border: none;
+  background:  #3c60a7;
+  border-radius: 3px;
+  color: #fff;
+  width: 60px;
+  height: 33px;
+}
+
+.botao_editar2:hover {
+  background: #004C9B;
+}
+
+/* EXCLUIR */
+.botao_excluir {
+  font-family: Noto-Sans;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+  background:  #ff0000;
+  border-radius: 3px;
+  width: 100px;
+  height: 25px;
+}
+
+.botao_excluir:hover {
+  background: #cf0606;
+}
+
+.botao_excluir a{
+  color: white;
+}
+
+/* BAIXAR */
+.baixar {
+  font-family: Noto-Sans;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+  background:  #0088f7;
+  border-radius: 3px;
+  width: 65px;
+  height: 30px;
+}
+
+.baixar:hover {
+  background: #077fe2;
+}
+
+.baixar a{
+  color: white;
+}
+
+/* ENVIAR */
+.botao_enviar {
+  font-family: Noto-Sans;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+  background:  #797777de;
+  border-radius: 3px;
+  width: 100px;
+  height: 25px;
+}
+
+.botao_enviar:hover {
+  background: #5e5858;
+}
+
+.botao_enviar a{
+  color: white;
+}
+
+/* ENVIAR ARQUIVOS */
+.enviar_arquivos {
+  font-family: Noto-Sans;
+  font-size: 15px;
+  cursor: pointer;
+  margin: 10px 0;
+  border: none;
+  background:  #3c60a7;
+  border-radius: 3px;
+  color: #fff;
+  width: 90px;
+  height: 30px;
+}
+
+.enviar_arquivos:hover {
+  background: #004C9B;
+}
+
+/* ESCOLHER FICHEIRO */
+.escolher {
+  font-family: Noto-Sans;
+  font-size: 15px;
+  cursor: pointer;
+  margin: 10px 0;
+  border: none;
+  background:  #3c60a7;
+  border-radius: 3px;
+  color: #fff;
+  width: 90px;
+  height: 30px;
+}
+
+.escolher:hover {
+  background: #004C9B;
+}
+
+/* BOTÃO LISTAR */
+.botao_listar {
+  font-family: Noto-Sans;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 10px 0;
+  border: none;
+  background:  white;
+  border-radius: 3px;
+  width: 130px;
+  height: 30px;
+}
+
+.botao_listar:hover {
+  background: #e1e3e7;
+}
+
+/* BOTÃO LOGAUT */
+.botao_sair {
+  font-family: Noto-Sans;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 10px 0;
+  border: none;
+  background:  white;
+  border-radius: 3px;
+  color: #fff;
+  width: 65px;
+  height: 30px;
+}
+
+.botao_sair:hover {
+  background: #e1e3e7;
+}
+
+/* BOTÃO CADASTRAR EMPRESA */
+.cadastrar_e {
+  font-family: Noto-Sans;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 10px 7px;
+  border: none;
+  background:  white;
+  border-radius: 3px;
+  color: #fff;
+  width: 151px;
+  height: 30px;
+}
+
+.cadastrar_e:hover {
+  background: #e1e3e7;
+}
+
+/* BOTÃO LISTAR EMPRESA */
+.listar_empresa {
+  font-family: Noto-Sans;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 15px 5px;
+  border: none;
+  background:  white;
+  border-radius: 3px;
+  color: #fff;
+  width: 130px;
+  height: 30px;
+}
+
+.listar_empresa:hover {
+  background: #e1e3e7;
+}
+
+/* BOTÃO LOGAUT 2 */
+.botao_sair2 {
+  font-family: Noto-Sans;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 10px 5px;
+  border: none;
+  background:  #ffffff;
+  border-radius: 3px;
+  color: #fff;
+  width: 65px;
+  height: 30px;
+}
+
+.botao_sair2:hover {
+  background: #e1e3e7;
+}
+
+/**** CADASTRAR ALUNO ****/
+.cadastro_a {
+  font-family: Noto-Sans;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 10px 7px;
+  border: none;
+  background:  white;
+  border-radius: 3px;
+  color: #fff;
+  width: 170px;
+  height: 30px;
+}
+
+.cadastrar_a:hover {
+  background: #e1e3e7;
+}
+
+/* SOLICITAR */
+.solicitar {
+  font-family: Noto-Sans;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 10px 7px;
+  border: none;
+  background:  white;
+  border-radius: 3px;
+  color: #fff;
+  width: 220px;
+  height: 30px;
+}
+
+.solicitar:hover {
+  background: #e1e3e7;
+}
+
+.reto label {
+  margin-left: 30px;
+  margin-top: -22px;
+}
+
+/* BOTÃO SOLICITAR */
+.soli {
+  font-family: Noto-Sans;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 10px 7px;
+  border: none;
+  background:  white;
+  border-radius: 3px;
+  color: #fff;
+  width: 155px;
+  height: 30px;
+}
+
+.soli:hover {
+  background: #e1e3e7;
+}
+
+/* BOTÃO SOLICITAR EX */
+.solix {
+  font-family: Noto-Sans;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 10px 7px;
+  border: none;
+  background:  white;
+  border-radius: 3px;
+  color: #fff;
+  width: 180px;
+  height: 30px;
+}
+
+.solix:hover {
+  background: #e1e3e7;
+}
