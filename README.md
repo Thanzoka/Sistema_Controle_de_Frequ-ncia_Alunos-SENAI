@@ -28,8 +28,11 @@ Listar todos os arquivos enviados para ela, podendo realizar o download de cada 
 Alunos:
 
 Fazem seu cadastro no sistema;
+
 Envia solicitação de documentos;
+
 Envia justificativa de falta;
+
 E pode ver o cronograma de aulas.
 
 Ex-aluno:
