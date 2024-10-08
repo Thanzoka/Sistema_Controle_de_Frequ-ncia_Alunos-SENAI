@@ -21,11 +21,11 @@ Listar as justificativas enviadas pelos alunos;
 
 Listar todas as solicitações feitas por alunos ou ex-alunos.
 
-Empresa:
+## Empresa:
 
 Listar todos os arquivos enviados para ela, podendo realizar o download de cada um.
 
-Alunos:
+## Alunos:
 
 Fazem seu cadastro no sistema;
 
@@ -35,11 +35,11 @@ Envia justificativa de falta;
 
 E pode ver o cronograma de aulas.
 
-Ex-aluno:
+## Ex-aluno:
 
 Faz a solicitação de documentos.
 
-Funcionalidades:
+## Funcionalidades:
 
 Cadastrar, Listar, Editar e Deletar empresas;
 
@@ -49,5 +49,5 @@ Ver, Solicitações e justificativas, Enviar Documentos;
 
 Cadastrar, Enviar e Justificar.
 
-Licença
+## Licença
 MIT
